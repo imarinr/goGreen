@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Ionic Super Starter 🎮
 
 <img src="https://user-images.githubusercontent.com/236501/32385619-bddac0ac-c08c-11e7-9ee4-9c892197191f.png" width="400" />
@@ -94,3 +95,7 @@ code (ex: en/gb/de/es/etc.).
 
 To change the language of the app, edit `src/app/app.component.ts` and modify
 `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
+=======
+# goGreen
+ goGreen  Aplicacion de cálculo de huella de carbono y recomendaciones para personas y pequeñas empresas. Desarrollo participante en el Hackathon BBVA 2020.
+>>>>>>> 230e1f09a134e04137967662bb313a731db4435f
