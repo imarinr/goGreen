@@ -18,6 +18,7 @@ export class QuestionsPage {
   slides: Slide[];
   showSkip = false;
   dir: string = 'ltr';
+  tabbs: any;
 
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public platform: Platform) {
     this.dir = platform.dir();
@@ -48,6 +49,8 @@ export class QuestionsPage {
           }
         ];
       });
+
+      this.tabbs = document.querySelector('.tabbar');
   }
 
   startApp() {
@@ -64,11 +67,13 @@ export class QuestionsPage {
   ionViewDidEnter() {
     // the root left menu should be disabled on the tutorial page
     this.menu.enable(false);
+    this.tabbs.style.display = 'none';
   }
 
   ionViewWillLeave() {
     // enable the root left menu when leaving the tutorial page
     this.menu.enable(true);
+    this.tabbs.style.display = 'flex';
   }
 
 }
