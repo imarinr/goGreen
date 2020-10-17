@@ -42,7 +42,7 @@ export class QuestionsPage {
             image: 'assets/img/transporte.png',
           },
           {
-            title: "Trnansporte",
+            title: "Transporte",
             description: "Tipo de transporte",
             image: 'assets/img/transporte.png',
           }
