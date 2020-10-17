@@ -1,3 +1,85 @@
 page-list-master {
 
 }
+.total-enery{
+    display: inline-block;
+}
+.round-progress{
+    margin-right: auto;
+    margin-top:2%;
+    width:90%;
+    height:50%;
+    margin-left: auto;
+    background-image: url(../../assets/img/arbol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+
+.round-progress-luz{
+    width: 80px!important;
+    height: 80px!important;
+    border-radius: 100%;
+    margin: 1em;
+    background-image: url(../../assets/img/trueno.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+
+.round-progress-gas {
+    width: 80px!important;
+    height: 80px!important;
+    border-radius: 100%;
+    margin: 1em;
+    background-image: url(../../assets/img/fuego.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+.round-progress-agua {
+    width: 80px!important;
+    height: 80px!important;
+    border-radius: 100%;
+    margin: 1em;
+    background-image: url(../../assets/img/agua.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+.round-progress-comida {
+    width: 80px!important;
+    height: 80px!important;
+    border-radius: 100%;
+    margin: auto;
+    background-image: url(../../assets/img/ramen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+
+.round-progress-desechos {
+    width: 80px!important;
+    height: 80px!important;
+    border-radius: 100%;
+    margin: auto;
+    background-image: url(../../assets/img/tacho-de-basura.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius:100%;
+}
+
+
+ion-content{
+    text-align: center;
+}
+h3{
+    color:#08a311;
+}
+

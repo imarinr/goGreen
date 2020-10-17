@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <!-- <ion-navbar>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
@@ -8,28 +8,139 @@
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-navbar> -->
 
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
-        <ion-avatar item-start>
-          <img [src]="item.profilePic" />
-        </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-      </button>
 
-      <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
-          {{ 'DELETE_BUTTON' | translate }}
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+    <round-progress class="round-progress col-md-3"
+    [current]="60"
+    [max]="100"
+    [color]="'#09ad40'"
+    [background]="'#eaeaea'"
+    [radius]="125"
+    [stroke]="20"
+    [rounded]="true"
+    [clockwise]="false"
+    [responsive]="false"
+    [duration]="800"
+    [animation]="'easeInOutQuart'"
+    [animationDelay]="10"
+ ></round-progress>
+    <h3>Emisiones Totales</h3>
+
+
+
+<ion-content class="total-enery">
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div>
+        <round-progress class="round-progress-luz"
+        [current]="30"
+        [max]="100"
+        [color]="'#09ad40'"
+        [background]="'#eaeaea'"
+        [radius]="125"
+        [stroke]="20"
+        [rounded]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="10"
+     ></round-progress>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <round-progress class="round-progress-gas"
+        [current]="10"
+        [max]="100"
+        [color]="'#09ad40'"
+        [background]="'#eaeaea'"
+        [radius]="125"
+        [stroke]="20"
+        [rounded]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="10"
+        ></round-progress>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <round-progress class="round-progress-agua"
+        [current]="70"
+        [max]="100"
+        [color]="'#09ad40'"
+        [background]="'#eaeaea'"
+        [radius]="125"
+        [stroke]="20"
+        [rounded]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="10"
+        ></round-progress>
+      </div>
+    </ion-col>
+    
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+        <round-progress class="round-progress-comida"
+        [current]="70"
+        [max]="100"
+        [color]="'#09ad40'"
+        [background]="'#eaeaea'"
+        [radius]="125"
+        [stroke]="20"
+        [rounded]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="10"
+        ></round-progress>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <round-progress class="round-progress-desechos"
+        [current]="70"
+        [max]="100"
+        [color]="'#09ad40'"
+        [background]="'#eaeaea'"
+        [radius]="125"
+        [stroke]="20"
+        [rounded]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="10"
+        ></round-progress>
+      </div>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+</ion-content>
 </ion-content>
