@@ -10,15 +10,21 @@ import { Items } from '../../providers';
   templateUrl: 'search.html'
 })
 export class SearchPage {
-
+  LEVEL_SEMILLA = 0;
+  LEVEL_BROTE = 1;
   currentItems: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  img_level_src = 'assets/img/arbol.jpg';
+  text_level = '';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { 
+    
+  }
 
   /**
    * Perform a service for the proper items.
    */
-  getItems(ev) {
+ /*  getItems(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
       this.currentItems = [];
@@ -28,14 +34,34 @@ export class SearchPage {
       name: val
     });
   }
-
+ */
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Item) {
+  /* openItem(item: Item) {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  } */
+
+  ionViewDidEnter() {
+    this.putLevel(0);
+  }
+  
+  putLevel(level: number) {
+    let txt_level = document.getElementById('txt-nivel');
+    let icon_level = document.getElementById('icon_level');
+    switch (level) {
+      case this.LEVEL_SEMILLA:
+        this.text_level = ' Semilla';
+        break;
+    
+      default:
+        break;
+    }
+    console.log('entre a putLevel');
+    txt_level.innerText += this.text_level;
+    
   }
 
 }
