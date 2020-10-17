@@ -7,7 +7,7 @@
   "scripts": {
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
+    "ionic:build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
@@ -27,7 +27,8 @@
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
-    "angular-svg-round-progressbar": "^1.1.1",
+    "angular-svg-round-progressbar": "^1.2.1",
+    "angularfire2": "^5.4.2",
     "firebase": "^7.24.0",
     "ionic-angular": "3.9.9",
     "ionic-progress-bar": "^1.0.0",
