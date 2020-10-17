@@ -1,2 +1,27 @@
 page-login {
+
+
+}
+form{
+    margin-top: 3em;
+}
+ion-content.background{
+    background-image:url(../../assets/img/log_fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ion-list{
+    text-align:center;
+}
+
+h1{
+    color:#00CC7E;
+    font-size:4em;
+}
+
+ion-item.item{
+    margin: 1em;
+    width: 92%;
+    border-radius: 10px;
 }

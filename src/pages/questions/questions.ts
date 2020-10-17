@@ -11,12 +11,12 @@ export interface Slide {
 
 @IonicPage()
 @Component({
-  selector: 'page-tutorial',
-  templateUrl: 'tutorial.html'
+  selector: 'page-questions',
+  templateUrl: 'questions.html'
 })
-export class TutorialPage {
+export class QuestionsPage {
   slides: Slide[];
-  showSkip = true;
+  showSkip = false;
   dir: string = 'ltr';
 
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public platform: Platform) {
@@ -32,26 +32,26 @@ export class TutorialPage {
         console.log('Loaded values', values);
         this.slides = [
           {
-            title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/go_green.png',
+            title: "Consumo Eléctrico",
+            description: "Consumo en kilowatts por bimestre",
+            image: 'assets/img/electricidadQ.png',
           },
           {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            title: "Transporte",
+            description: "Tipo de transporte",
+            image: 'assets/img/transporte.png',
           },
           {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/crecer.gif',
+            title: "Trnansporte",
+            description: "Tipo de transporte",
+            image: 'assets/img/transporte.png',
           }
         ];
       });
   }
 
   startApp() {
-    this.navCtrl.setRoot('WelcomePage', {}, {
+    this.navCtrl.setRoot('ListMasterPage', {}, {
       animate: true,
       direction: 'forward'
     });
