@@ -10,8 +10,8 @@ page-list-master {
     width:90%;
     height:50%;
     margin-left: auto;
-    background-image: url(../../assets/img/arbol.jpg);
-    background-size: cover;
+    background-image: url(../../assets/img/arbol02.png);
+    background-size: contain;
     background-repeat: no-repeat;
     
     border-radius:100%;
@@ -22,7 +22,7 @@ page-list-master {
     height: 80px!important;
     border-radius: 100%;
     margin: 1em;
-    background-image: url(../../assets/img/trueno.png);
+    background-image: url(../../assets/img/energia.png);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -34,7 +34,7 @@ page-list-master {
     height: 80px!important;
     border-radius: 100%;
     margin: 1em;
-    background-image: url(../../assets/img/fuego.png);
+    background-image: url(../../assets/img/carro.png);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -45,7 +45,7 @@ page-list-master {
     height: 80px!important;
     border-radius: 100%;
     margin: 1em;
-    background-image: url(../../assets/img/agua.png);
+    background-image: url(../../assets/img/basura.png);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -56,24 +56,24 @@ page-list-master {
     height: 80px!important;
     border-radius: 100%;
     margin: auto;
-    background-image: url(../../assets/img/ramen.png);
+    background-image: url(../../assets/img/comida.png);
     background-size: cover;
     background-repeat: no-repeat;
     
     border-radius:100%;
 }
 
-.round-progress-desechos {
-    width: 80px!important;
-    height: 80px!important;
-    border-radius: 100%;
-    margin: auto;
-    background-image: url(../../assets/img/tacho-de-basura.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+// .round-progress-desechos {
+//     width: 80px!important;
+//     height: 80px!important;
+//     border-radius: 100%;
+//     margin: auto;
+//     background-image: url(../../assets/img/tacho-de-basura.png);
+//     background-size: cover;
+//     background-repeat: no-repeat;
     
-    border-radius:100%;
-}
+//     border-radius:100%;
+// }
 
 
 ion-content{
