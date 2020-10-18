@@ -76,4 +76,18 @@ export class QuestionsPage {
     this.tabbs.style.display = 'flex';
   }
 
+  calcularHuellaTransporte(tipoAuto: number) {
+    switch(tipoAuto){}
+  }
+
+  calcularHuellaEnergía() {
+
+  }
+
+  calcularHuellaAlimentacion() {
+
+  }
+  calcularHuellaResiduos() {
+
+  }
 }
