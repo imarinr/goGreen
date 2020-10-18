@@ -2,37 +2,125 @@
 
 <ion-content no-bounce>
   <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
-    <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image" />
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description">Tipo de trasnporte:</p>
+
+    <ion-slide >
+      <img  src="assets/img/electricidadQ.png" class="slide-image" />
+      <p class="slide-title">Consumo eléctrico</p>
       <ion-item>
-        <ion-label>Automovil
-          
-        </ion-label>
-        <ion-checkbox></ion-checkbox>
-       
+        <ion-label class="title-label" stacked>Consumo en kilowatts por bimestre</ion-label>
+        <ion-input placeholder="Ingresa el dato" type="number"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label>Motocicleta
+
+    </ion-slide>
+    <ion-slide >
+      <img  src="assets/img/transporte.png" class="slide-image" />
+      <h2 class="slide-title" ></h2>
+      <p >Tipo de transporte:</p>
+      <ion-list>
+        <ion-label>Automóvil</ion-label>
+        <ion-item>
           
-        </ion-label>
-        <ion-checkbox></ion-checkbox>
-       
-      </ion-item>
-      <ion-item>
-        <ion-label> Trasporte público
+          <ion-select  placeholder="Días ">
+            
+            <ion-option value="1">1 día por semana</ion-option>
+            <ion-option value="2">2 días por semana</ion-option>
+            <ion-option value="3">3 días por semana</ion-option>
+            <ion-option value="4">4 días por semana</ion-option>
+            <ion-option value="5">5 días por semana</ion-option>
+            <ion-option value="6">6 días por semana</ion-option>
+            <ion-option value="7">7 días por semana</ion-option>
+          </ion-select>
+        
+          <ion-select placeholder="Combustible">
+            
+            <ion-option value="f">Gasolina</ion-option>
+            <ion-option value="m">Diesel</ion-option>
+          </ion-select>
+        
+        </ion-item>
+        <ion-label>Motocicleta</ion-label>
+        <ion-item>
           
-        </ion-label>
-        <ion-checkbox></ion-checkbox>
-       
-      </ion-item>
+          <ion-select  placeholder="Días por semana">
+            
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+            <ion-option value="6">6</ion-option>
+            <ion-option value="7">7</ion-option>
+          </ion-select>
+        
+          <ion-select placeholder="Combustible">
+            
+            <ion-option value="f">Gasolina</ion-option>
+            <ion-option value="m">Diesel</ion-option>
+          </ion-select>
+        
+        </ion-item>
+        <ion-label>Público</ion-label>
+        <ion-item>
+          
+          <ion-select  placeholder="Días por semana">
+            
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+            <ion-option value="6">6</ion-option>
+            <ion-option value="7">7</ion-option>
+          </ion-select>
+        
+          <ion-select placeholder="Combustible">
+            
+            <ion-option value="f">Gasolina</ion-option>
+            <ion-option value="m">Diesel</ion-option>
+          </ion-select>
+        
+        </ion-item>
+      
+      </ion-list>
+    </ion-slide>
+    <ion-slide >
+      <img  src="assets/img/alimentación.png" class="slide-image-food" />
+      <p class="slide-title">Alimentación</p>
+      <ion-list radio-group [(ngModel)]="relationship">
+        <ion-label class="slide-food">Dierta 1</ion-label>
+        <ion-item  class="item-food">
+          <ion-label>Res  o cordero  toda la semana </ion-label>
+          <ion-radio value="friends" checked></ion-radio>
+        </ion-item>
+        <ion-label class="slide-food">Dierta 2</ion-label>
+        <ion-item class="item-food">
+          <ion-label>Res  o cordero de 4-6 veces por semana </ion-label>
+          <ion-radio value="family"></ion-radio>
+        </ion-item>
+        <ion-label class="slide-food">Dierta 3</ion-label>
+        <ion-item class="item-food">
+          <ion-label>Res  o cordero  de 1-3 veces por semana  </ion-label>
+          <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
+        </ion-item>
+        <ion-label class="slide-food">Dierta 4</ion-label>
+        <ion-item class="item-food">
+          <ion-label>Otra proteína de origen animal que no sea res o cordero</ion-label>
+          <ion-radio value="friends" checked></ion-radio>
+        </ion-item>
+        <ion-label class="slide-food">Dierta 5 </ion-label>
+        <ion-item class="item-food">
+          <ion-label>No consumo productos de origen animal </ion-label>
+          <ion-radio value="family"></ion-radio>
+        </ion-item>
+      </ion-list>
+
     </ion-slide>
     <ion-slide>
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
       <h2 class="slide-title"></h2>
       
       <button ion-button icon-end large clear (click)="startApp()">
+        Calcular
       <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-slide>

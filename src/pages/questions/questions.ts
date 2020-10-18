@@ -35,7 +35,7 @@ export class QuestionsPage {
         this.slides = [
           {
             title: "Consumo Eléctrico",
-            description: "Consumo en kilowatts por bimestre",
+            description:"<checkbox>hola</checkbox>",
             image: 'assets/img/electricidadQ.png',
           },
           {
