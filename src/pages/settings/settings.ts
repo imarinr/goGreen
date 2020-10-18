@@ -34,14 +34,26 @@ export class SettingsPage {
 
   subSettings: any = SettingsPage;
 
+  news = [];
+
   constructor(public navCtrl: NavController,
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
+      for (let i = 0; i < 10; i++) {
+        this.news[i] =  {
+          title: 'Noticia #' + (i+1),
+          description: 'Descripcion corta de la nota publicada, dame click para abrir mi URL asociada',
+          url: 'https://openinnovation.bbva.com/'
+        }
+        console.log('generando elemento ' + i);
+      }
   }
 
-  _buildForm() {
+  openURL(){}
+
+  /* _buildForm() {
     let group: any = {
       option1: [this.options.option1],
       option2: [this.options.option2],
@@ -63,16 +75,16 @@ export class SettingsPage {
     this.form.valueChanges.subscribe((v) => {
       this.settings.merge(this.form.value);
     });
-  }
+  } */
 
   ionViewDidLoad() {
     // Build an empty form for the template to render
-    this.form = this.formBuilder.group({});
+    //this.form = this.formBuilder.group({});
   }
 
   ionViewWillEnter() {
     // Build an empty form for the template to render
-    this.form = this.formBuilder.group({});
+    /* this.form = this.formBuilder.group({});
 
     this.page = this.navParams.get('page') || this.page;
     this.pageTitleKey = this.navParams.get('pageTitleKey') || this.pageTitleKey;
@@ -86,7 +98,7 @@ export class SettingsPage {
       this.options = this.settings.allSettings;
 
       this._buildForm();
-    });
+    }); */
   }
 
   ngOnChanges() {

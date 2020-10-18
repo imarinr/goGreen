@@ -1,22 +1,10 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
-  </ion-list>
+   <img [src]="img_level_src" alt="Icono representativo del nivel actual" class="icon-level" id="icon_level">
+    <h1>¡Felicitaciones!</h1>
+    <h3 id="txt-nivel">Estás en el nivel </h3>
+    <button ion-button color="primary" expand="block">Compartir</button>
 </ion-content>
