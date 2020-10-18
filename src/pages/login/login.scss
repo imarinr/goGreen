@@ -6,9 +6,10 @@ form{
     margin-top: 3em;
 }
 ion-content.background{
-    background-image:url(../../assets/img/log_fondo.png);
+    background-image:url(../../assets/img/bosque.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 ion-list{
@@ -16,8 +17,9 @@ ion-list{
 }
 
 h1{
-    color:#00CC7E;
+    color:#08a311;
     font-size:4em;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 ion-item.item{

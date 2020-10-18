@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
+import {IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,6 +7,7 @@ export interface Slide {
   title: string;
   description: string;
   image: string;
+
 }
 
 @IonicPage()
@@ -43,10 +44,20 @@ export class QuestionsPage {
             image: 'assets/img/transporte.png',
           },
           {
-            title: "Trnansporte",
+            title: "Transporte",
             description: "Tipo de transporte",
             image: 'assets/img/transporte.png',
-          }
+          },
+          {
+            title: "Resiudos",
+            description: "Reciclas",
+            image: 'assets/img/desperdicios.png',
+          },
+          {
+            title: "Alimetación",
+            description: "Tipo de dieta:",
+            image: 'assets/img/alimetacion.png',
+          },
         ];
       });
 
@@ -76,18 +87,81 @@ export class QuestionsPage {
     this.tabbs.style.display = 'flex';
   }
 
-  calcularHuellaTransporte(tipoAuto: number) {
-    switch(tipoAuto){}
+  calcularHuellaTransporte(tipoTransporte: number, diasALaSemana: number) {
+    switch(tipoTransporte) { 
+      case tipoTransporte =1 :{ 
+       //Auto
+       let kilo_CO2_mes = (1696/365)*diasALaSemana*4;
+       return kilo_CO2_mes; 
+      } 
+
+      case tipoTransporte =2 :{ 
+       //Moto
+       let kilo_CO2_mes = (884/365)*diasALaSemana*4;
+       return kilo_CO2_mes; 
+      } 
+
+      case tipoTransporte =3 :{ 
+       //Bus
+       let kilo_CO2_mes = ((1054/365)/20)*diasALaSemana*4;
+       return kilo_CO2_mes; 
+      } 
+       
+      default: { 
+       //statements; 
+       break; 
+      } 
+   } 
   }
 
-  calcularHuellaEnergía() {
-
+  calcularHuellaEnergía(kilowattsHr: number) {
+    let kw_mes = kilowattsHr / 2;
+    let mw_mes = kw_mes / 1000;
+    let kg_CO2_mes = (mw_mes * 0.505)*1000;
+    return kg_CO2_mes
   }
 
-  calcularHuellaAlimentacion() {
-
+  calcularHuellaAlimentacion(dieta: number) {
+    switch(dieta) { 
+      case dieta=1 :{ 
+         //Carne res o cordero todos los dias
+        let kilo_CO2_mes = 342;
+        return kilo_CO2_mes; 
+      } 
+      case dieta=2 :{ 
+         //carne  res o cordero 4-6 veces a la semana
+         let kilo_CO2_mes = 283;
+         return kilo_CO2_mes; 
+      } 
+      case dieta=3 :{ 
+         //Carne  res o cordero 1-3 veces a la semana
+        let kilo_CO2_mes = 195;
+        return kilo_CO2_mes;  
+      } 
+      case dieta=4 :{ 
+         //Carne que no sea de res 7 veces a la semana
+         let kilo_CO2_mes = 136;
+         return kilo_CO2_mes; 
+      } 
+      case dieta=5 :{ 
+        //Dieta Vegana; 
+        let kilo_CO2_mes = 84;
+        return kilo_CO2_mes; 
+      } 
+      default: { 
+         //statements; 
+        break; 
+      } 
+   } 
   }
-  calcularHuellaResiduos() {
-
+  calcularHuellaResiduos(basura: boolean) {
+    if (basura == false){
+      let kilo_CO2_mes = 15;
+      return kilo_CO2_mes;
+    }else{
+      let kilo_CO2_mes = 0;
+      return kilo_CO2_mes;
+    
   }
+}
 }

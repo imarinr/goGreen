@@ -75,7 +75,11 @@ export class SearchPage {
     }
     console.log('entre a putLevel');
     txt_level.innerText += this.text_level;
+<<<<<<< HEAD
     //icon_level.src = this.img_level_src;
+=======
+    // icon_level.src = this.img_level_src;
+>>>>>>> 8bc3c5db5fca042f923b16140862204685dcd926
   }
 
 }
