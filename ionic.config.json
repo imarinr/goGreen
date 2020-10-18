@@ -1,5 +1,7 @@
 {
   "name": "goGreen",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
