@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
+import {IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,6 +7,7 @@ export interface Slide {
   title: string;
   description: string;
   image: string;
+
 }
 
 @IonicPage()
@@ -43,10 +44,20 @@ export class QuestionsPage {
             image: 'assets/img/transporte.png',
           },
           {
-            title: "Trnansporte",
+            title: "Transporte",
             description: "Tipo de transporte",
             image: 'assets/img/transporte.png',
-          }
+          },
+          {
+            title: "Resiudos",
+            description: "Reciclas",
+            image: 'assets/img/desperdicios.png',
+          },
+          {
+            title: "Alimetación",
+            description: "Tipo de dieta:",
+            image: 'assets/img/alimetacion.png',
+          },
         ];
       });
 
