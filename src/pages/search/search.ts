@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
+// import { Item } from '../../models/item';
 import { Items } from '../../providers';
 
 @IonicPage()
@@ -52,7 +52,7 @@ export class SearchPage {
   
   putLevel(level: number) {
     let txt_level = document.getElementById('txt-nivel');
-    let icon_level = document.getElementById('icon_level');
+    // let icon_level = document.getElementById('icon_level');
     switch (level) {
       case this.LEVEL_SEMILLA:
         this.text_level = ' Semilla';
@@ -75,11 +75,8 @@ export class SearchPage {
     }
     console.log('entre a putLevel');
     txt_level.innerText += this.text_level;
-<<<<<<< HEAD
-    //icon_level.src = this.img_level_src;
-=======
     // icon_level.src = this.img_level_src;
->>>>>>> 8bc3c5db5fca042f923b16140862204685dcd926
+
   }
 
 }
