@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
+import {IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,6 +7,7 @@ export interface Slide {
   title: string;
   description: string;
   image: string;
+
 }
 
 @IonicPage()
@@ -46,7 +47,17 @@ export class QuestionsPage {
             title: "Transporte",
             description: "Tipo de transporte",
             image: 'assets/img/transporte.png',
-          }
+          },
+          {
+            title: "Resiudos",
+            description: "Reciclas",
+            image: 'assets/img/desperdicios.png',
+          },
+          {
+            title: "Alimetación",
+            description: "Tipo de dieta:",
+            image: 'assets/img/alimetacion.png',
+          },
         ];
       });
 
@@ -76,4 +87,18 @@ export class QuestionsPage {
     this.tabbs.style.display = 'flex';
   }
 
+  calcularHuellaTransporte(tipoAuto: number) {
+    switch(tipoAuto){}
+  }
+
+  calcularHuellaEnergía() {
+
+  }
+
+  calcularHuellaAlimentacion() {
+
+  }
+  calcularHuellaResiduos() {
+
+  }
 }
