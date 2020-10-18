@@ -1,5 +1,7 @@
 {
   "name": "goGreen",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "ionic-angular"
 }
